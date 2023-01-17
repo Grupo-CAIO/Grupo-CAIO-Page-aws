@@ -13,7 +13,7 @@ const NotFoundPage = () => {
 			const innerWidth = pathOr(0, ['innerWidth'], window);
 			setIsMobile(innerWidth <= 1025);
 		}
-	}, [window]);
+	}, []);
 
 	return (
 		<main className='caio_main_container'>
