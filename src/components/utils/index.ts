@@ -2,11 +2,19 @@ import {useState, useEffect} from 'react';
 import {useSpring} from 'framer-motion';
 
 const getWindowDimensions = () => {
+	if (typeof window !== "undefined") {
 	const {innerWidth: width, innerHeight: height} = window;
 	return {
 		width,
 		height,
-	};
+	};}
+	else{
+		return {
+			innerWidth:1200,
+			innerHeight:800
+		};
+	}
+
 };
 
 const useWindowDimensions = () => {
