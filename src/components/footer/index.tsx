@@ -16,12 +16,11 @@ const Footer = (props: any) => {
 				<div className='container_links_mobile'>
 					<div className='title_col'>Contáctanos</div>
 					<div className='link_col_footer'>Líneas de atención</div>
-					<div className='link_col_footer'>Informacion@ciao.com</div>
-					<div className='link_col_footer'>Contratacion@ciao.com</div>
+					<div className='link_col_footer'>jvalenciap@grupo-caio.com</div>
 					<div className='title_col'>Contáctanos</div>
 					<div className='link_col_footer'>Líneas de atención</div>
 					<div className='link_col_footer'>Contáctanos</div>
-					<div className='link_col_footer'>Informacion@ciao.com</div>
+					<div className='link_col_footer'>+573046192909</div>
 					<div className='social_networks'>
 						<div className='text_social_networks'>Siguenos</div>
 						<img src={FACEBOOK} className='icon_social_network' />
@@ -65,13 +64,12 @@ const Footer = (props: any) => {
 					<div className='col_two_footer_content'>
 						<div className='title_col'>Contáctanos</div>
 						<div className='link_col_footer'>Líneas de atención</div>
-						<div className='link_col_footer'>Informacion@ciao.com</div>
-						<div className='link_col_footer'>Contratacion@ciao.com</div>
+						<div className='link_col_footer'>jvalenciap@grupo-caio.com</div>
 					</div>
 					<div className='col_three_footer_content'>
 						<div className='title_col'>Contáctanos</div>
 						<div className='link_col_footer'>Líneas de atención</div>
-						<div className='link_col_footer'>Informacion@ciao.com</div>
+						<div className='link_col_footer'>+573046192909</div>
 						<div className='social_networks'>
 							<div className='text_social_networks'>Siguenos</div>
 							<img src={FACEBOOK} className='icon_social_network' />

@@ -3,7 +3,6 @@ import type {HeadFC} from 'gatsby';
 import Header from '../components/header';
 import Banner from '../components/banner';
 import About from '../components/about';
-import Team from '../components/team';
 import Services from '../components/services';
 import Contact from '../components/contact';
 import Footer from '../components/footer';
@@ -21,7 +20,6 @@ const IndexPage = () => {
 			<Header isMobile={isMobile} />
 			<Banner isMobile={isMobile} />
 			<About />
-			<Team />
 			<Services />
 			<Contact />
 			<motion.div className='progress-bar' style={{scaleX}} />

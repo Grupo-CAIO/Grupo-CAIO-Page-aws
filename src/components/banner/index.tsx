@@ -17,10 +17,9 @@ const Banner = (props: any) => {
 					transition={{duration: 1}}
 					className='banner_container_title_container'
 				>
-					<h1 className='banner_container_title_h1'>Dicover the digital Art of develop</h1>
+					<h1 className='banner_container_title_h1'>Somos expertos en comercio digital</h1>
 					<h2 className='banner_container_title_h2'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna. aliqua. Ut enim ad minim veniam.
+					Implementamos soluciones robustas, intuitivas, y de alto rendimiento, enfocadas en la optimización y la conversión. 
 					</h2>
 					<div className='banner_container_title_footer'>
 						<div
@@ -53,10 +52,9 @@ const Banner = (props: any) => {
 				initial={{y: -500}}
 				transition={{duration: 1}}
 			>
-				<h1 className='banner_container_title_h1'>Dicover the digital Art of develop</h1>
+				<h1 className='banner_container_title_h1'>Somos expertos en comercio digital</h1>
 				<h2 className='banner_container_title_h2'>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna. aliqua. Ut enim ad minim veniam.
+				Implementamos soluciones robustas, intuitivas, y de alto rendimiento, enfocadas en la optimización y la conversión.
 				</h2>
 				<div className='banner_container_title_footer'>
 					<div

@@ -68,10 +68,6 @@ const Services = () => {
 				initial='hidden'
 				variants={squareVariantsPositive}
 			>
-				<div className='images_service'>
-					<img src={TECH} className='image_services' />
-					<img src={DEVELOP} className='image_services' />
-				</div>
 			</motion.div>
 		</section>
 	);

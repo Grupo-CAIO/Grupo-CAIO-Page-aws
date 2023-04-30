@@ -46,16 +46,6 @@ const Header = (props: any) => {
 								setShow(false);
 							}}
 						>
-							<a href='/#team-caio' className='link_menu_mobile'>
-								Nuestro Equipo
-							</a>
-						</div>
-						<div
-							className='item_menu_mobile'
-							onClick={() => {
-								setShow(false);
-							}}
-						>
 							<a href='/#services-caio' className='link_menu_mobile'>
 								Servicios
 							</a>
@@ -88,11 +78,7 @@ const Header = (props: any) => {
 						Sobre <b>CAIO</b>
 					</a>
 				</li>
-				<li className='caio_header_container_list_item'>
-					<a className='caio_header_container_list_item_link' href='/#team-caio'>
-						Nuestro Equipo
-					</a>
-				</li>
+				 
 				<li className='caio_header_container_list_item'>
 					<a className='caio_header_container_list_item_link' href='/#services-caio'>
 						Servicios
