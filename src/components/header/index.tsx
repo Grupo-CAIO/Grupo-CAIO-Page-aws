@@ -1,17 +1,23 @@
-import React, {useState, useMemo} from 'react';
-import Logo from '../../images/logo.png';
-import {pathOr} from 'ramda';
+import React, { useState, useMemo } from 'react';
+import Logo from '../../images/icono.png';
+import LogoSitio from '../../images/logo-color.jpg';
+import LINKEDIN from '../../images/linkedin.svg';
+import WHATSAPP from '../../images/whatsapp.svg';
+import INSTAGRAM from '../../images/instagram.svg';
+import { pathOr } from 'ramda';
 
 const Header = (props: any) => {
+
 	const [show, setShow] = useState<boolean>(false);
-	const isMobile = useMemo(() => pathOr(false, ['isMobile'], props), [props]);
+	const scrollPosition = useMemo<number>(() => pathOr(0, ['scrollPosition'], props), [props]);
+	const isMobile = useMemo<any>(() => pathOr(false, ['isMobile'], props), [props]);
 
 	if (isMobile)
 		return (
-			<header className='caio_header_container' style={{height: show ? '100%' : '61px'}}>
+			<header className={`caio_header_container ${scrollPosition > 5 ? 'fixed_position' : ''}`} style={{ height: show ? '100%' : '61px' }}>
 				<div className='principal_content'>
 					<a href='/#banner'>
-						<img src={Logo} className='logo' />
+						{scrollPosition > 5 ? <img src={LogoSitio} className='logo' /> : <img src={Logo} className='logo' />}
 					</a>
 					{show ? (
 						<div className='menu_buttom' onClick={() => setShow(false)}>
@@ -36,8 +42,8 @@ const Header = (props: any) => {
 								setShow(false);
 							}}
 						>
-							<a href='/#about-caio' className='link_menu_mobile'>
-								Sobre CAIO
+							<a href='#banner-home' className='link_menu_mobile'>
+								INICIO
 							</a>
 						</div>
 						<div
@@ -47,7 +53,7 @@ const Header = (props: any) => {
 							}}
 						>
 							<a href='/#services-caio' className='link_menu_mobile'>
-								Servicios
+								UN NUEVO AIRE
 							</a>
 						</div>
 						<div
@@ -57,7 +63,27 @@ const Header = (props: any) => {
 							}}
 						>
 							<a href='/#contact-caio' className='link_menu_mobile'>
-								Contacto
+								¿POR QUÉ NOSOTROS?
+							</a>
+						</div>
+						<div
+							className='item_menu_mobile'
+							onClick={() => {
+								setShow(false);
+							}}
+						>
+							<a href='/#contact-caio' className='link_menu_mobile'>
+								¿QUÉ OBTIENES?
+							</a>
+						</div>
+						<div
+							className='item_menu_mobile'
+							onClick={() => {
+								setShow(false);
+							}}
+						>
+							<a href='/#contact-caio' className='link_menu_mobile'>
+								ESCRIBENOS
 							</a>
 						</div>
 					</div>
@@ -66,30 +92,46 @@ const Header = (props: any) => {
 		);
 
 	return (
-		<header className='caio_header_container'>
+		<header className={`caio_header_container ${scrollPosition > 5 ? 'fixed_position' : ''}`}>
 			<div>
-				<a href='/#banner'>
-					<img src={Logo} className='logo' />
+				<a href='#banner-home' className='logo-general'>
+					{scrollPosition > 5 ? <img src={LogoSitio} className='logo' /> : <img src={Logo} className='logo' />}
 				</a>
 			</div>
 			<ul className='caio_header_container_list'>
 				<li className='caio_header_container_list_item'>
-					<a className='caio_header_container_list_item_link' href='/#about-caio'>
-						Sobre <b>CAIO</b>
+					<a className='caio_header_container_list_item_link' href='#banner-home'>
+						INICIO
 					</a>
 				</li>
-				 
+
 				<li className='caio_header_container_list_item'>
-					<a className='caio_header_container_list_item_link' href='/#services-caio'>
-						Servicios
+					<a className='caio_header_container_list_item_link' href='#slider-home'>
+						UN NUEVO AIRE
 					</a>
 				</li>
 				<li className='caio_header_container_list_item'>
-					<a className='caio_header_container_list_item_contact' href='/#contact-caio'>
-						Contacto
+					<a className='caio_header_container_list_item_link' href='#sobre-nosotros'>
+						¿POR QUÉ NOSOTROS?
+					</a>
+				</li>
+				<li className='caio_header_container_list_item'>
+					<a className='caio_header_container_list_item_link' href='#que-obtenemos'>
+						¿QUÉ OBTIENES?
+					</a>
+				</li>
+				<li className='caio_header_container_list_item'>
+					<a className='caio_header_container_list_item_contact' href='#contact-caio'>
+						ESCRÍBENOS
 					</a>
 				</li>
 			</ul>
+			<a target='_blank' href='https://cetrik.com/' className='caio_header_cetrik'>CETRIK</a>
+			<div className='social_header'>
+				<a href='https://api.whatsapp.com/send?phone=573197890372&text=%C2%A1Hola%20CAIO!%20Quiero%20m%C3%A1s%20informaci%C3%B3n' target='_blank'><img src={WHATSAPP} className='icon_social_network whatsapp' /></a>
+				<a href='http://linkedin.com/company/grupo-caio' target='_blank'><img src={LINKEDIN} className='icon_social_network linkedin' /></a>
+				<a href='https://www.instagram.com/grupo_caio?igsh=OXYwdG1uN3kyNXNw' target='_blank'><img src={INSTAGRAM} className='icon_social_network facebook' /></a>
+			</div>
 		</header>
 	);
 };

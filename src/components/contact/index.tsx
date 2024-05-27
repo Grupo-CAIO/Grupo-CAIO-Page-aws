@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import emailjs from '@emailjs/browser';
+import CetrikWoman from '../../images/cetrik-woman-hero4.webp'
 
 const Contact = () => {
 	const [categorieSelect, setCategorieSelect] = useState<string>('');
@@ -17,7 +18,7 @@ const Contact = () => {
 
 	const EMAIL_REGEX =
 		/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-	const categories = ['Entrenamiento', 'Consultoría', 'Implementaciones y mantenimiento', 'Diseño UX/UI'];
+	const categories = ['Entrenamiento', 'Consultoría', 'Implementaciones y mantenimiento', 'Diseño UX/UI', 'Integraciones'];
 
 	useEffect(() => {
 		if (categorieSelect) setCategoryEmpty('');
@@ -109,15 +110,12 @@ const Contact = () => {
 
 	return (
 		<section className='contact_container' id='contact-caio'>
-			<div className='contact_container_title'>Contacto</div>
-
 			<form className='container_contact_form' onSubmit={sendInfoContact}>
 				<div className='title_form'>
-					let us contact
-					<br />
-					You
+					<img src={CetrikWoman}/>
 				</div>
 				<div className='contact'>
+					<div className='contact_container_title'>Contacto</div>
 					<div className='text-interest'>Estoy interesado en:</div>
 					<div className='categories_list_contact'>
 						{categories.map((item, i) => {
