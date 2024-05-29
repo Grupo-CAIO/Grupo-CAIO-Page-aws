@@ -510,7 +510,7 @@ main{
 
         .contact_container_title{
             font-size:70px;
-            color:$color-primary;
+            color:#eee;
             font-weight:bold;
             margin-bottom:34px;
             // margin-top:40px !important;
@@ -545,7 +545,7 @@ main{
         }
 
         .text-interest{
-            color: $color-primary;
+            color: #eee;
             font-size:18px;
             margin-bottom:20px;
         }
@@ -627,7 +627,7 @@ main{
             display:flex;
             justify-content: center;
             align-items: center;
-            background: transparent linear-gradient(90deg, $color-gradient-one 0%, $color-gradient-two 100%) 0% 0% no-repeat padding-box;
+            background: #F1D573;
             border-radius:24px;
             border:none;
             font-weight:bold;
@@ -1278,6 +1278,10 @@ main{
     justify-content: center;
     align-items: center;
 
+    img {
+        max-width: 90vw;
+    }
+
     .label-gallery {
         display: block;
         margin-top: 20px;
@@ -1599,7 +1603,8 @@ main{
     }
 
     .nosotros-section-container {
-        flex-direction: column;
+        flex-direction: column-reverse !important;
+        display: flex !important;
 
         .nosotros-section-description {
             width: 100% !important  ;
@@ -1607,7 +1612,7 @@ main{
     }
 
     .nosotros-section-image {
-        display: none;
+        display: none !important;
     }
 
     .container_menu_mobile {

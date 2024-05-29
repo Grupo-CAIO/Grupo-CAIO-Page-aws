@@ -73,7 +73,7 @@ const Footer = (props: any) => {
 
 				<div className='container_label_copy'>
 					<div className='container_label_copy_cont'>
-						© 2024 Creado por <a href='/'>Grupo CAIO</a> | <a href='https://cetrik.com/' target='_blank'>Cetrik.com</a> | Digital Commerce
+						© 2024 Creado por <a href='/'>Grupo CAIO</a> | <a href='https://cetrik.com/' target='_blank'>Cetrik.com</a> | Digital Commerce - ¡Puro talento Colombiano, papá!
 					</div>
 				</div>
 			</div>
